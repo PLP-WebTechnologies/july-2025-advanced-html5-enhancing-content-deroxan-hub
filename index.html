@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week2 2</title>
+    <h1>Lists, Tables, Media and Forms</h1>
+        <style>
+     body{
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #ffffff;
+    }
+    header, nav, section, footer {
+        margin-bottom: auto;
+        padding: 20px;
+        max-width: 1200px;
+    }
+    header {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+    }
+    nav {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 8px
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    h2 {
+        border-bottom: 2px solid #4CAF50;
+        padding-bottom: 10px;
+        color: #333;
+    }
+    table, th, td {
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+        padding: 8px;
+        text-align: left;
+    }
+    th{
+        background-color: #4CAF50;
+        color: white;
+    }
+    td {
+        background-color: #f9f9f9;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    form {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    fieldset {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    legend{
+        font-weight: bold;
+        color: #333;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML5 Elements</h1>
+    <p>Tables, Lists, Media and a HTML5 Form</p>
+</header>
+
+<nav>
+    <a href="#table">Table</a>
+    <a href="#lists">Lists</a>
+    <a href="#media">Media</a>
+    <a href="#form">Form</a>
+</nav>
+
+<section id="table">
+    <h2>Table Example: Wine List</h2>
+    <table>
+        <tr>
+            <th>Color</th>
+            <th>Taste</th>
+            <th>Production</th>
+        </tr>
+        <tr>
+            <td>Red</td>
+            <td>Dry</td>
+            <td>Still Wine</td>
+        </tr>
+        <tr>
+            <td>Red</td>
+            <td>Sweet</td>
+            <td>Sparkling Wine</td>
+        </tr>
+        <tr>
+            <td>Rose</td>
+            <td>Off-Sweet</td>
+            <td>Fortified Wine</td>
+        </tr>
+    </table>
+</section>
+
+<section id="lists">
+    <h2>Lists Example: Wine Brands</h2>
+    <ul>
+        <li>Château Lafite Rothschild (Bordeaux, France)</li>
+        <li>Domaine de la Romanée-Conti (Burgundy, France)</li>
+        <li>Opus One (Napa Valley, USA)</li>
+        <li>Penfolds Grange (South Australia)</li>
+        <li>Antinori Tignanello (Tuscany, Italy)</li>
+
+    </ul>
+    <ol>
+        <li>Château d’Esclans (Provence, France)</li>
+        <li>Miraval (Provence, France)</li>
+        <li>Domaines Ott (Provence, France)</li>
+        <li>Gérard Bertrand (Languedoc, France)</li>
+        <li>Mateus (Portugal)</li>
+    </ol>
+</section>
+
+<section id="media">
+    <h2>Media Example: Image</h2>
+    <h3>Image</h3>
+    <img src="wake up simulation matrix  art.jpeg" alt="Placeholder Image">
+
+    <h3>Video</h3>
+    <video width="640" height="360" controls>
+        <source src="6963744-hd_1920_1080_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<section id="form">
+    <h2>Form Example: Contact Form</h2>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Feedback</legend>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <label for="wine">Favourite Wine:</label>
+            <select id="wine" name="wine"> required>
+                <option value="red">Red</option>
+                <option value="white">White</option>
+                <option value="rose">Rosé</option>
+                <option value="sparkling">Sparkling</option>
+                <option value="fortified">Fortified</option>
+            </select>
+
+        <fieldset>
+            <legend>Newsletter Subscription</legend>    
+            <label for="newsletter">Subscribe to Newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            </label>  
+            <label>
+            <input type="checkbox" id="terms" name="terms" value="agree" required>
+            I agree to the terms and conditions   
+            </label>  
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kariuki Kimotho. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+    
